@@ -17,5 +17,6 @@ EXPOSE 9117
 
 VOLUME [ "/home/jacred/init.conf", "/home/jacred/Data" ]
 
-ENTRYPOINT ["/lib/systemd/systemd"]
+### ENTRYPOINT ["/lib/systemd/systemd"]
+CMD /root/.dotnet/dotnet JacRed.dll
 ### BUILD MAIN IMAGE end ###
