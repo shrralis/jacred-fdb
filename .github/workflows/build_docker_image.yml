@@ -1,4 +1,4 @@
-name: MultiArchDockerBuild
+name: Build JacRed Docker image
 
 on:
   release:
