@@ -20,12 +20,12 @@ RUN rm -f publish.zip
 FROM alpine
 
 ENV JACRED_HOME=/home/jacred
+WORKDIR $JACRED_HOME
 
-COPY --from=builder ./opt/src $JACRED_HOME/
+COPY --from=builder ./opt/src .
+COPY ./start.sh .
 
 RUN apk add --no-cache --update aspnetcore6-runtime
-
-WORKDIR $JACRED_HOME
 
 EXPOSE 9117
 CMD ["./start.sh"]
