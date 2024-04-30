@@ -28,6 +28,5 @@ RUN apk add --no-cache --update aspnetcore6-runtime
 WORKDIR $JACRED_HOME
 
 EXPOSE 9117
-VOLUME ["$JACRED_HOME"]
-ENTRYPOINT ["dotnet", "JacRed.dll"]
+CMD ["dotnet", "JacRed.dll"]
 ### BUILD MAIN IMAGE end ###
